@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café des Deux Moulins | Montmartre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bistro-red: #8B0000;
+            --warm-gold: #D4AF37;
+            --cream: #FFFDD0;
+            --dark-wood: #2C1A1D;
+            --text-dark: #1A1A1A;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--bistro-red);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 5px solid var(--warm-gold);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--warm-gold);
+        }
+
+        nav {
+            background-color: var(--dark-wood);
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--warm-gold);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--bistro-red);
+            margin-bottom: 1rem;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+        }
+
+        .menu-section {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .menu-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--bistro-red);
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--warm-gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 0.5rem;
+        }
+
+        .item-name {
+            font-weight: 500;
+        }
+
+        .item-desc {
+            font-size: 0.85rem;
+            color: #666;
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .item-price {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--bistro-red);
+            margin-left: 1rem;
+        }
+
+        footer {
+            background-color: var(--dark-wood);
+            color: var(--cream);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--warm-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Café des Deux Moulins</h1>
+        <p>Montmartre, Paris</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Visit</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="intro">
+            <h2>Little Pleasures in Life</h2>
+            <p>Step into the warm, nostalgic atmosphere of Montmartre's iconic bistro. Cracking the sugar crust of a crème brûlée with the back of a spoon is always recommended.</p>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <h3>Specialités du Café</h3>
+            <div class="menu-grid">
+                <div>
+                    <div class="menu-item">
+                        <div>
+                            <span class="item-name">Crème Brûlée</span>
+                            <span class="item-desc">Classic vanilla bean custard with caramelized sugar top</span>
+                        </div>
+                        <span class="item-price">€8.50</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="menu-item">
+                        <div>
+                            <span class="item-name">Café au Lait</span>
+                            <span class="item-desc">Espresso served in a traditional wide bowl with steamed milk</span>
+                        </div>
+                        <span class="item-price">€4.20</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="menu-item">
+                        <div>
+                            <span class="item-name">Croissant au Beurre</span>
+                            <span class="item-desc">Freshly baked butter croissant</span>
+                        </div>
+                        <span class="item-price">€2.80</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="menu-item">
+                        <div>
+                            <span class="item-name">Croque Monsieur</span>
+                            <span class="item-desc">Toasted ham and melted Gruyère cheese sandwich</span>
+                        </div>
+                        <span class="item-price">€12.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <p><strong>Café des Deux Moulins</strong></p>
+        <p>15 Rue Lepic, 75018 Paris, France</p>
+        <p class="highlight">Open daily from 7:30 AM – 2:00 AM</p>
+    </footer>
+
+</body>
+</html>
